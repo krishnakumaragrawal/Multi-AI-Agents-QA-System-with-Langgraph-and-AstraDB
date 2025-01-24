@@ -3,26 +3,26 @@
 This project is a **Multi-AI-Agent Question-Answering (QA) System** built using LangGraph, AstraDB, and Streamlit. It integrates multiple AI agents to answer user queries by intelligently routing questions to the most relevant data source: a vector store (AstraDB), Wikipedia, or Arxiv. The system leverages advanced natural language processing (NLP) techniques, including HuggingFace embeddings and Groq's LLM, to provide accurate and context-aware responses.
 
 ## Key Features:
-1. Dynamic Question Routing:
+**1. Dynamic Question Routing:**
   - The system uses a LangGraph-based workflow to classify and route user questions to the appropriate data source:
     - **Vector Store:** For questions related to agents, prompt engineering, and adversarial attacks.
     - **Wikipedia:** For general knowledge questions.
     - **Arxiv:** For research-related queries.
   - The routing is powered by a Groq LLM fine-tuned for decision-making.
 
-2. Vector Store with AstraDB:
+**2. Vector Store with AstraDB:**
   - Documents are vectorized using **HuggingFace embeddings** and stored in **AstraDB**, a scalable vector database.
   - The system retrieves relevant documents from AstraDB for questions routed to the vector store.
 
-3. Wikipedia and Arxiv Integration:
+**3. Wikipedia and Arxiv Integration:**
   - For general knowledge questions, the system queries Wikipedia using the `WikipediaAPIWrapper`.
   - For research-related questions, it retrieves the latest papers from Arxiv using the `ArxivAPIWrapper`.
 
-4. Streamlit Frontend:
+**4. Streamlit Frontend:**
   - The system features a user-friendly Streamlit interface where users can input questions and receive answers.
   - The app dynamically displays the source of the answer (vector store, Wikipedia, or Arxiv) and the retrieved content.
 
-5. Scalable and Modular:
+**5. Scalable and Modular:**
   - The project is designed to be modular, allowing easy integration of additional data sources or agents.
   - The use of LangGraph ensures a flexible and extensible workflow.
 
